@@ -1,45 +1,47 @@
 package AddressBook;
 import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 public class Contact {
-    static ArrayList<String > FirstName;
-    static ArrayList<String > LastName;
+    static ArrayList<String> FirstName;
+    static ArrayList<String> LastName;
     static ArrayList<String> Address;
     static ArrayList<String> City;
-    static ArrayList<String > state;
-    static ArrayList<String > Zip;
-    static ArrayList<String > PhoneNuber;
-    static ArrayList<String > email;
+    static ArrayList<String> state;
+    static ArrayList<String> Zip;
+    static ArrayList<String> PhoneNuber;
+    static ArrayList<String> email;
 
-    void One (){
+    void One() {
         this.FirstName = new ArrayList<>();
     }
 
-    void Two (){
+    void Two() {
         this.LastName = new ArrayList<>();
     }
 
-    void Three (){
+    void Three() {
         this.Address = new ArrayList<>();
     }
 
-    void Five (){
+    void Five() {
         this.state = new ArrayList<>();
     }
 
-    void Four (){
+    void Four() {
         this.City = new ArrayList<>();
     }
 
-    void Six (){
+    void Six() {
         this.Zip = new ArrayList<>();
     }
 
-    void Seven (){
+    void Seven() {
         this.PhoneNuber = new ArrayList<>();
     }
 
-    void Eight (){
+    void Eight() {
         this.email = new ArrayList<>();
     }
 }
