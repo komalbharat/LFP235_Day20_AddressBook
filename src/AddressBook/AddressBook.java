@@ -22,7 +22,8 @@ public class AddressBook extends Adding {
         while (exit == 8) {
             System.out.println("Please enter the following details: ");
             System.out.println("1. Add");
-            System.out.println("3. Edit"); // soe here we added for edit
+            System.out.println("2. Delete");
+            System.out.println("3. Edit");
             System.out.println("4. display");
             System.out.println("5. Exit");
 
@@ -32,18 +33,32 @@ public class AddressBook extends Adding {
             Scanner sc3 = new Scanner(System.in);
             int inp = sc3.nextInt();
 
-            if (inp == 1) { //it will check user input and do the action
+            if (inp == 1) { //if user put 1 it will edit
                 ob4.Add();
-            }  else if (inp == 3) { //so i give 3 for edit the contact
+            } else if (inp == 2) {//if user put 1 it will Delete
+
+                System.out.println("Enter the first name you want to Delete");
+                Scanner in1 = new Scanner(System.in);
+                String sp1 = in1.nextLine();
+
+                if (ob5.FirstName.contains(sp1)) { //it will check the condition is true or false
+                    int v1 = ob5.FirstName.indexOf(sp1);
+
+                    ob4.Sub(v1);//it will subtract that contact
+                } else { //if its false it will this massage
+                    System.out.println("The name does not exist");
+                }
+
+            } else if (inp == 3) {
                 System.out.println("Enter the name you want to edit");
-                Scanner in2 = new Scanner(System.in); //scanner it will save the input
+                Scanner in2 = new Scanner(System.in);
                 String sp2 = in2.nextLine();
 
-                if (ob5.FirstName.contains(sp2)) { //adn check the conditions
+                if (ob5.FirstName.contains(sp2)) {
                     int v2 = ob5.FirstName.indexOf(sp2);
 
                     ob4.Edit(v2);
-                } else { //if ists not no match the gove this massage
+                } else {
                     System.out.println("The name does not exist");
                 }
             }
@@ -69,7 +84,7 @@ public class AddressBook extends Adding {
                     System.out.println("The name does not exist");
                 }
 
-            } else if (exit == 5) {
+            } else if (inp == 5) {
                 exit = 9;
             } else {
                 System.out.println("Enter the velid input");
