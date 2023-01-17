@@ -22,6 +22,7 @@ public class AddressBook extends Adding {
         while (exit == 8) {
             System.out.println("Please enter the following details: ");
             System.out.println("1. Add");
+            System.out.println("3. Edit"); // soe here we added for edit
             System.out.println("4. display");
             System.out.println("5. Exit");
 
@@ -31,9 +32,22 @@ public class AddressBook extends Adding {
             Scanner sc3 = new Scanner(System.in);
             int inp = sc3.nextInt();
 
-            if (inp == 1) {
+            if (inp == 1) { //it will check user input and do the action
                 ob4.Add();
+            }  else if (inp == 3) { //so i give 3 for edit the contact
+                System.out.println("Enter the name you want to edit");
+                Scanner in2 = new Scanner(System.in); //scanner it will save the input
+                String sp2 = in2.nextLine();
+
+                if (ob5.FirstName.contains(sp2)) { //adn check the conditions
+                    int v2 = ob5.FirstName.indexOf(sp2);
+
+                    ob4.Edit(v2);
+                } else { //if ists not no match the gove this massage
+                    System.out.println("The name does not exist");
+                }
             }
+
             else if (inp == 4){
 
                 System.out.println("Enter the name you want to display");
@@ -58,7 +72,7 @@ public class AddressBook extends Adding {
             } else if (exit == 5) {
                 exit = 9;
             } else {
-                System.out.println("Enter the valid input");
+                System.out.println("Enter the velid input");
             }
 
         }
